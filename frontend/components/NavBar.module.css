@@ -11,9 +11,18 @@
     width: 15%;
 }
 
+.logo h3:hover {
+    cursor: pointer;
+}
+
 .links {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 35%;
+}
+
+.links h3:hover {
+    text-decoration: none;
+    cursor: pointer;
 }

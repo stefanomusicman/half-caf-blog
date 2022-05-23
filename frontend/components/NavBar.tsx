@@ -1,17 +1,37 @@
 import React, { Fragment } from "react";
 import styles from './NavBar.module.css';
+import { useRouter } from "next/router";
 
 const NavBar = () => {
+
+    const router = useRouter();
+
+    function NavigateHome() {
+        router.push('/')
+    }
+
+    function NavigateAbout() {
+        router.push('/About-Us');
+    }
+
+    function NavigateContact() {
+        router.push('/Contact');
+    }
+
+    function NavigatePosts() {
+        router.push('/Blog-Posts');
+    }
+
     return(
         <Fragment>
             <div className={styles.main}>
                 <div className={styles.logo}>
-                    <h3>Half Caf Blog</h3>
+                    <h3 onClick={NavigateHome}>Half Caf Blog</h3>
                 </div>
                 <div className={styles.links}>
-                    <h3>About Us</h3>
-                    <h3>Contact</h3>
-                    <h3>Blog Posts</h3>
+                    <h3 onClick={NavigateAbout}>About Us</h3>
+                    <h3 onClick={NavigateContact}>Contact</h3>
+                    <h3 onClick={NavigatePosts}>Blog Posts</h3>
                 </div>
             </div>
         </Fragment>
