@@ -6,19 +6,19 @@ const NavBar = () => {
 
     const router = useRouter();
 
-    function NavigateHome() {
+    function NavigateHome(): void {
         router.push('/')
     }
 
-    function NavigateAbout() {
+    function NavigateAbout(): void {
         router.push('/About-Us');
     }
 
-    function NavigateContact() {
+    function NavigateContact(): void {
         router.push('/Contact');
     }
 
-    function NavigatePosts() {
+    function NavigatePosts(): void {
         router.push('/Blog-Posts');
     }
 
