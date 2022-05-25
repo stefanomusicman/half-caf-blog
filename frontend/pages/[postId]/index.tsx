@@ -1,25 +1,26 @@
+import { Fragment } from "react";
 
 export async function getStaticPaths() {
     const fetchParams = {
-        method: 'POST',
+        method: 'post',
         headers: {
             'content-type': 'application/json'
         },
         body: JSON.stringify({
-            query: `
-            {
-                posts{
-                    data{
-                        id
-                    }
+            query: `{
+            posts{
+                data{
+                    id
                 }
             }
-            `
+        }
+        `
         })
     }
 
     const res = await fetch(`http://localhost:1337/graphql`, fetchParams);
-    const posts = await res.json();
+    const data = await res.json();
+    const { posts } = data;
     const paths = posts.data.map((post: any) => {
         return { params: { id: post.id } }
     })
@@ -38,9 +39,7 @@ export async function getStaticProps({params}: any) {
             'content-type': 'application/json'
         },
         body: JSON.stringify({
-            query: `
-
-            `
+            query: ` `
         })
     }
 
@@ -53,7 +52,9 @@ export async function getStaticProps({params}: any) {
 }
 
 const Post = () => {
-
+    return(
+        <Fragment></Fragment>
+    )
 }
 
 export default Post;
