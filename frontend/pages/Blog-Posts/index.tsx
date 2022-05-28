@@ -15,8 +15,6 @@ export async function getStaticProps() {
 
 const BlogPosts: React.FC<{data: any}> = ({data}) => {
 
-  console.log(data);
-
   return(
     <Fragment>
         <NavBar />
