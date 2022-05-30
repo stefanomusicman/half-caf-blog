@@ -5,7 +5,7 @@ import styles from './index.module.css';
 
 export async function getStaticProps() {
 
-    const res = await fetch('http://localhost:1337/api/posts');
+    const res = await fetch('http://localhost:1337/api/posts?populate=heroImage,secondImage,category');
     const data = await res.json();
   
     return {
@@ -14,7 +14,7 @@ export async function getStaticProps() {
   }
 
 const BlogPosts: React.FC<{data: any}> = ({data}) => {
-
+  console.log(data);
   return(
     <Fragment>
         <NavBar />
