@@ -7,7 +7,7 @@ const BlogCard: React.FC<{ id: number, title: string }> = ({ id, title }) => {
     const router = useRouter();
 
     function showPostHandler() {
-        router.push('/' + id)
+        router.push('/posts/' + id)
     }
 
     return(

@@ -1,5 +1,6 @@
 import { Fragment } from "react";
-import NavBar from "../../components/NavBar/NavBar";
+import NavBar from "../../../components/NavBar/NavBar";
+import styles from './index.module.css';
 
 export async function getStaticPaths() {
 
@@ -40,13 +41,15 @@ const Post: React.FC<{data: any}> = ({data}) => {
     return(
         <Fragment>
             <NavBar />
-            <h1>{title}</h1>
-            <img src={heroImage}/>
-            <p>{intro}</p>
-            <p>{coffeeReview}</p>
-            <p>{locationReview}</p>
-            <img src={secondImage}/>
-            <p>{finalVerdict}</p>
+            <div className={styles.main}>
+                <h1>{title}</h1>
+                <img src={heroImage}/>
+                <p>{intro}</p>
+                <p>{coffeeReview}</p>
+                <p>{locationReview}</p>
+                <img src={secondImage}/>
+                <p>{finalVerdict}</p>
+            </div>
         </Fragment>
     )
 }

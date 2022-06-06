@@ -11,15 +11,15 @@ const NavBar = () => {
     }
 
     function NavigateAbout(): void {
-        router.push('/About-Us');
+        router.push('/about-us');
     }
 
     function NavigateContact(): void {
-        router.push('/Contact');
+        router.push('/contact');
     }
 
     function NavigatePosts(): void {
-        router.push('/Blog-Posts');
+        router.push('/posts');
     }
 
     return(
