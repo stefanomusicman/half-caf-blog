@@ -2,7 +2,7 @@
 title: "Contact"
 
 contact:
-  title: "Contact Qurno"
+  title: "Contact Half Caf Blog"
   content: "I'm here to help and answer any question you might have. I look forward to hearing from you"
 
   # contact info
