@@ -77,7 +77,7 @@ export default function Header() {
               <nav className="navbar navbar-expand-lg navbar-light p-0">
                 <Link href="/">
                   <a className="navbar-brand font-weight-bold d-flex mb-0">
-                    <Image
+                    {/* <Image
                       className="img-fluid"
                       width={110}
                       height={35}
@@ -86,7 +86,8 @@ export default function Header() {
                       layout="fixed"
                       placeholder="blur"
                       blurDataURL={siteConfig.logo}
-                    />
+                    /> */}
+                    <div>Half Caf Blog</div>
                   </a>
                 </Link>
 
