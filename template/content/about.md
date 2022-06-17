@@ -4,21 +4,21 @@ description: "This a dummy meta description of about page"
 
 #intro
 intro:
-  title: "We are the Qurno, <br> Team of content writers and designers."
-  description: "If ever a place existed where you could just go crazy creatively, it is definitely your about page. It’s your chance to show your readers who you really are. Pictures, quotes, inspirational graphics, whatever it is that drives you.. Display it here in a way that only you can.
+  title: "We are Half Caf Blog, <br> Team of passionate coffee conoisseurs."
+  description: "Welcome to Half Caf Blog, a place for all things coffee within the greater Montreal Area. Here you will find a variety of content including coffee shop reviews, coffee reviews and coffee machine reviews! We are a small team of people who are passionate about coffee and would like nothing more than to provide Montrealers with non-biased information for anything related to coffee.
   
   
-  I’ve included a plugin in the setup of this theme that will make adding columns to your pages and posts a piece of cake. Let creativity take control, and forget about the technical end of things, I’ve got your six."
+  At Half Caf Blog, when we review anything, we don't simply focus on the overall trendiness of a product/coffee shop but we also put a lot of emphasis on the actual coffee! For instance, when we review a coffee shop, we always order two drinks, a black espresso in order to get a taste for the raw coffee being served and then a milk drink (preferably a cortado style drink) to get a taste of whether or not the milk is being heated skillfully."
 
   # about images
   images:
-  - src: "/images/about/01.jpg"
+  - src: "/images/about/coffee2.jpg"
     width: "620px"
-    height: "346px"
+    height: "349px"
     grid_class: "col-lg-6"
 
-  - src: "/images/about/00.jpg"
-    width: "460px"
+  - src: "/images/about/coffee1.jpg"
+    width: "686px"
     height: "515px"
     grid_class: "col-lg-3 col-6"
 
@@ -31,6 +31,6 @@ intro:
 # our writers
 # if "enable: false" authors/writers will not show on the about page
 our_writers:
-  enable: true
+  enable: false # was initially set to true
  
 ---
