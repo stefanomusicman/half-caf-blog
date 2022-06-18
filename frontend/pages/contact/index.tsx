@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import NavBar from "../../components/NavBar/NavBar";
+import Navigation from "../../components/NavBar/Navigation";
 
 const Contact = () => {
     return(
         <Fragment>
-            <NavBar />
+            <Navigation />
             <p>Please feel free to reach out to us regarding anyhting from collaborations to just chatting about coffee!</p>
         </Fragment>
     )

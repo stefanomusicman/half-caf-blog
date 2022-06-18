@@ -2,6 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 50px;
+    margin-left: 10em;
+    margin-right: 10em;
 }
 
 .logo {
@@ -17,12 +20,34 @@
 
 .links {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 35%;
+}
+
+.links h3 {
+    padding: 0.5rem 2rem;
 }
 
 .links h3:hover {
     text-decoration: none;
     cursor: pointer;
+    background-color: #fcdede;
+}
+
+@media(max-width: 1400px) {
+    .main {
+        margin-left: 5em;
+        margin-right: 5em;
+        padding: 25px;
+    }
+
+    .logo {
+        width: 25%;
+    }
+
+    .links {
+        justify-content: end;
+        width: 75%;
+    }
 }

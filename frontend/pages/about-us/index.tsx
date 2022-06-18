@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import NavBar from "../../components/NavBar/NavBar";
+import Navigation from "../../components/NavBar/Navigation";
 
 const About = () => {
     return(
         <Fragment>
-            <NavBar />
+            <Navigation />
             <p>Welcome to Half Caf Blog. A one stop shop for all things coffee-related in the greater Montreal region!</p>
         </Fragment>
     )

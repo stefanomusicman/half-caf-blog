@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import NavBar from "../../../components/NavBar/NavBar";
+import Navigation from "../../../components/NavBar/Navigation";
 import styles from './index.module.css';
 
 export async function getStaticPaths() {
@@ -40,7 +40,7 @@ const Post: React.FC<{data: any}> = ({data}) => {
 
     return(
         <Fragment>
-            <NavBar />
+            <Navigation />
             <div className={styles.main}>
                 <h1>{title}</h1>
                 <img src={heroImage}/>

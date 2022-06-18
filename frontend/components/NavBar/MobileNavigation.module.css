@@ -1,0 +1,49 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-left: 5em;
+    margin-right: 5em;
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+}
+
+.logo h3:hover {
+    cursor: pointer;
+}
+
+.hamburger {
+    color: #505050;
+    width: 35px;
+    height: 35px;
+}
+
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 5em;
+    margin-right: 5em;
+    position: absolute;
+    margin-top: 3em;
+    background-color: #fff6ef;
+    width: 100%;
+}
+
+.links h3:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #fcdede;
+}
