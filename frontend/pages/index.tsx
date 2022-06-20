@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Banner from '../components/Banner/Banner'
+import Footer from '../components/Footer/Footer'
+import GoToPostsButton from '../components/HomeButton/GoToPostsButton'
 import MobileNavigation from '../components/NavBar/MobileNavigation'
 import NavBar from '../components/NavBar/NavBar'
 import Navigation from '../components/NavBar/Navigation'
@@ -12,6 +14,8 @@ const Home: NextPage<{}> = () => {
     <div>
       <Navigation />
       <Banner />
+      <GoToPostsButton />
+      <Footer />
     </div>
   )
 }

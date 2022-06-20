@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 50vh;
+    height: 55vh;
     position: relative;
 }
 
@@ -17,7 +17,7 @@
 }
 
 .textBox h1 {
-    font-size: 52px;
+    font-size: 60px;
     text-align: center;
     font-family: 'Crete Round', serif;
     line-height: 1.4;
