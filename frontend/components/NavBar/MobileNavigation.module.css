@@ -1,7 +1,6 @@
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     padding: 50px;
     margin-left: 5em;
@@ -34,16 +33,23 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-left: 5em;
-    margin-right: 5em;
     position: absolute;
     margin-top: 3em;
     background-color: #fff6ef;
     width: 100%;
+    z-index: 1000;
 }
 
 .links h3:hover {
     text-decoration: none;
     cursor: pointer;
     background-color: #fcdede;
+}
+
+@media(max-width: 800px) {
+    .main {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 25px;
+    }
 }

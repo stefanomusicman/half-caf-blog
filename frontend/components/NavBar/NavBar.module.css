@@ -9,18 +9,19 @@
 
 .logo {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 15%;
 }
 
 .logo h3:hover {
     cursor: pointer;
+    color: rgb(192, 151, 76);
 }
 
 .links {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: 35%;
 }
@@ -33,6 +34,7 @@
     text-decoration: none;
     cursor: pointer;
     background-color: #fcdede;
+    border-radius: 5px;
 }
 
 @media(max-width: 1400px) {
