@@ -6,7 +6,7 @@ const Banner = () => {
         <div className={styles.main}>
             <SVG />
             <div className={styles.textBox}>
-                <h1>Your one stop shop for all things coffee in the greater Montreal region!</h1>
+                <h1>Your one stop shop for all things coffee in the greater Montreal area!</h1>
             </div>
         </div>
     )
