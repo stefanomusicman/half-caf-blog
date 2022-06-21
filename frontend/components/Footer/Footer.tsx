@@ -11,6 +11,9 @@ const Footer = () => {
                 <input placeholder='Your email address'/>
                 <button>{<AiOutlineUserAdd className={styles.icon}/>}Join today</button>
             </form>
+            <div className={styles.copyright}>
+                <h3>© 2022 Half Caf Blog. All rights reserved</h3>
+            </div>
         </footer>
     )
 }

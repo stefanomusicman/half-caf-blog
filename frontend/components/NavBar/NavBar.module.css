@@ -16,7 +16,7 @@
 
 .logo h3:hover {
     cursor: pointer;
-    color: rgb(192, 151, 76);
+    color: #F08E80;
 }
 
 .links {
@@ -33,7 +33,7 @@
 .links h3:hover {
     text-decoration: none;
     cursor: pointer;
-    background-color: #fcdede;
+    background-color: #F08E80;
     border-radius: 5px;
 }
 
