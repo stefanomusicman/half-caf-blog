@@ -16,6 +16,7 @@ export async function getStaticProps() {
   
   const BlogPosts: React.FC<{data: any}> = ({data}) => {
     // console.log(data);
+
     return(
       <Fragment>
         <Navigation />
@@ -25,7 +26,12 @@ export async function getStaticProps() {
             <h1>All Posts</h1>
           </div>
           <div className={styles.primaryBodyContainer}>
-            {data.map((item: any) => <BlogCard key={item.id} id={item.id} title={item.attributes.title}/>)}
+            {data.map((item: any) => 
+              <BlogCard introText={item.attributes.IntroText} 
+                        image={item.attributes.heroImage.data.attributes.formats.medium.url} 
+                        key={item.id} 
+                        id={item.id} 
+                        title={item.attributes.title}/>)}
           </div>
           <Footer />
         </div>
