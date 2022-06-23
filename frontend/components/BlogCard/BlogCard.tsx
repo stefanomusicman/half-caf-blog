@@ -13,8 +13,8 @@ const BlogCard: React.FC<{ id: number, title: string }> = ({ id, title }) => {
     return(
         <Fragment>
             <div className={styles.main}>
-                <h3>{title}</h3>
-                <button onClick={showPostHandler}>See Post</button>
+                {/* <h3>{title}</h3> */}
+                {/* <button onClick={showPostHandler}>See Post</button> */}
             </div>
         </Fragment>
     )
