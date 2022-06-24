@@ -22,7 +22,7 @@ export async function getStaticProps() {
         <Navigation />
         <div className={styles.contentBox}>
           <div className={styles.titleBox}>
-            <svg className={styles.svg} width='198' height='32' viewBox='0 0 298 32' fill='red' xmlns='http://www.w3.org/2000/svg'><path d='M1 17.1944C62.6418 7.28318 174.478 -8.49028 296 27' stroke='%23F6BFB3' stroke-width='9' /></svg>
+            <svg className={styles.svg} width='198' height='32' viewBox='0 0 298 32' fill='red' xmlns='http://www.w3.org/2000/svg'><path d='M1 17.1944C62.6418 7.28318 174.478 -8.49028 296 27' stroke='%23F6BFB3' strokeWidth='9' /></svg>
             <h1>All Posts</h1>
           </div>
           <div className={styles.primaryBodyContainer}>
@@ -31,7 +31,8 @@ export async function getStaticProps() {
                         image={item.attributes.heroImage.data.attributes.formats.medium.url} 
                         key={item.id} 
                         id={item.id} 
-                        title={item.attributes.title}/>)}
+                        title={item.attributes.title}
+                        dateCreated={item.attributes.createdAt}/>)}
           </div>
           <Footer />
         </div>

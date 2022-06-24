@@ -88,6 +88,7 @@
 .facebook:hover {
     cursor: pointer;
     color: rgb(66 103 178);
+    transform: scale(1.2);
 }
 
 .instagram {
@@ -97,7 +98,8 @@
 
 .instagram:hover {
     cursor: pointer;
-    color: #fb3958	;
+    color: #fb3958;
+    transform: scale(1.2);
 }
 
 /* Right Side */
@@ -130,6 +132,10 @@
     font-family: "Work Sans", sans-serif;
 }
 
+.form textarea:focus {
+    outline-color: #F08E80;
+}
+
 .form input {
     width: 100%;
     border: 1px solid lightgrey;
@@ -140,6 +146,10 @@
 
 .form input::placeholder {
     font-family: "Work Sans", sans-serif;
+}
+
+.form input:focus {
+    outline-color: #F08E80;
 }
 
 .form button {
