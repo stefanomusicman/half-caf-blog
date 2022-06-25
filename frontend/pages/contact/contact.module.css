@@ -6,26 +6,6 @@
     width: 100%;
 }
 
-.titleBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    padding: 25px;
-    position: relative;
-}
-
-.titleBox h1 {
-    z-index: 1000;
-}
-
-.svg {
-    position: absolute;
-    z-index: 1;
-    fill: #F08E80;
-    opacity: 0.7;
-}
-
 /* Main Body */
 .primaryBodyContainer {
     display: flex;

@@ -5,16 +5,14 @@ import { BsFacebook } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
 import { IoIosSend } from 'react-icons/io';
 import Footer from "../../components/Footer/Footer";
+import Title from "../../components/Title/Title";
 
 const Contact = () => {
     return(
         <Fragment>
             <Navigation />
             <div className={styles.contentBox}>
-                <div className={styles.titleBox}>
-                    <svg className={styles.svg} width='198' height='32' viewBox='0 0 298 32' fill='red' xmlns='http://www.w3.org/2000/svg'><path d='M1 17.1944C62.6418 7.28318 174.478 -8.49028 296 27' stroke='%23F6BFB3' stroke-width='9' /></svg>
-                    <h1>Contact</h1>
-                </div>
+                <Title title='Contact'/>
                 <div className={styles.primaryBodyContainer}>
                     <div className={styles.leftSide}>
                         <div className={styles.paragraph1}>

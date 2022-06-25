@@ -6,16 +6,14 @@ import coffee1 from '../../public/coffee1.jpeg';
 import coffee2 from '../../public/coffee2.jpg';
 import coffee3 from '../../public/coffee3.jpg';
 import Footer from "../../components/Footer/Footer";
+import Title from "../../components/Title/Title";
 
 const About = () => {
     return(
         <Fragment>
             <Navigation />
             <div className={styles.contentContainer}>
-                <div className={styles.titleBox}>
-                    <svg className={styles.svg} width='198' height='32' viewBox='0 0 298 32' fill='red' xmlns='http://www.w3.org/2000/svg'><path d='M1 17.1944C62.6418 7.28318 174.478 -8.49028 296 27' stroke='%23F6BFB3' stroke-width='9' /></svg>
-                    <h1>About Us</h1>
-                </div>
+                <Title title='About Us'/>
                 <div className={styles.captionBox}>
                     <h2>We are Half Caf Blog, a team of passionate coffee conoisseurs.</h2>
                 </div>
