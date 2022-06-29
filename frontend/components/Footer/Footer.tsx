@@ -4,14 +4,37 @@ import { AiOutlineUserAdd } from 'react-icons/ai';
 
 const Footer = () => {
 
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState<string>('');
+
+    const postEmail = async (mail: string) => {
+        const response = await fetch('https://half-caf-blog-default-rtdb.firebaseio.com/emails.json', {
+            method: 'POST',
+            body: JSON.stringify(mail),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const data: object = await response.json();
+        console.log(data);
+    }
+
+    const submitHandler = (e: any): void => {
+        e.preventDefault();
+
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+          postEmail(email);
+          setEmail('');
+        } else {
+            alert('Please enter a valid email');
+        }
+    }
 
     return(
         <footer className={styles.main}>
             <div className={styles.captionBox}>
                 <h1>Get latest posts delivered right to your inbox</h1>
             </div>
-            <form className={styles.form}>
+            <form onSubmit={submitHandler} className={styles.form}>
                 <input 
                     type='email'
                     value={email} 
