@@ -3,9 +3,9 @@ import Navigation from "../../components/NavBar/Navigation";
 import styles from './contact.module.css';
 import { BsFacebook } from 'react-icons/bs';
 import { BsInstagram } from 'react-icons/bs';
-import { IoIosSend } from 'react-icons/io';
 import Footer from "../../components/Footer/Footer";
 import Title from "../../components/Title/Title";
+import ContactForm from "../../components/ContactForm/ContactForm";
 
 const Contact = () => {
     return(
@@ -30,12 +30,7 @@ const Contact = () => {
                     </div>
                     <div className={styles.rightSide}>
                         <h2>Contact Form</h2>
-                        <form className={styles.form}>
-                            <textarea placeholder="Write your message here" />
-                            <input placeholder='Email Address'/>
-                            <input placeholder='Your name here'/>
-                            <button>Send {<IoIosSend />}</button>
-                        </form>
+                        <ContactForm />
                     </div>
                 </div>
                 <Footer />
