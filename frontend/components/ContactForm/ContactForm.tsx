@@ -50,7 +50,7 @@ const ContactForm = () => {
             <textarea value={message} onChange={(e) => setMessage(e.target.value)} placeholder="Write your message here" />
             <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder='Email Address'/>
             <input value={name} onChange={(e) => setName(e.target.value)} placeholder='Your name here'/>
-            <button type='submit'>Send {<IoIosSend />}</button>
+            <button type='submit'>Send {<IoIosSend className={styles.logo}/>}</button>
         </form>
     )
 }

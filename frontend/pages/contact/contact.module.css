@@ -63,23 +63,27 @@
 .facebook {
     width: 35px;
     height: 35px;
+    transition: all 0.2s ease-out;
 }
 
 .facebook:hover {
     cursor: pointer;
     color: rgb(66 103 178);
     transform: scale(1.2);
+    transition: all 0.2s ease-out;
 }
 
 .instagram {
     width: 35px;
     height: 35px;
+    transition: all 0.2s ease-out;
 }
 
 .instagram:hover {
     cursor: pointer;
     color: #fb3958;
     transform: scale(1.2);
+    transition: all 0.2s ease-out;
 }
 
 /* Right Side */
