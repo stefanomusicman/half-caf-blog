@@ -7,7 +7,7 @@ import Title from "../../components/Title/Title";
 
 export async function getStaticProps() {
 
-    const res = await fetch('http://localhost:1337/api/posts?populate=heroImage,secondImage,category');
+    const res = await fetch('http://localhost:1337/api/posts?populate=heroImage,category');
     const data = await res.json();
   
     return {
