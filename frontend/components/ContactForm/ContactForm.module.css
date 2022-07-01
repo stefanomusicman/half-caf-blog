@@ -13,6 +13,7 @@
     border-radius: 5px;
     margin-bottom: 30px;
     padding: 15px 15px;
+    font-family: "Work Sans", sans-serif;
 }
 
 .form textarea::placeholder {
@@ -29,6 +30,7 @@
     border-radius: 5px;
     padding: 18px 10px;
     margin-bottom: 30px;
+    font-family: "Work Sans", sans-serif; 
 }
 
 .form input::placeholder {
@@ -40,6 +42,9 @@
 }
 
 .form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px 30px;
     background-color: #F08E80;
     color: white;

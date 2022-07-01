@@ -1,13 +1,15 @@
 import { useState } from 'react';
 import styles from './ContactForm.module.css';
 import { IoIosSend } from 'react-icons/io';
-import { Tracing } from 'trace_events';
+import { useRouter } from 'next/router';
 
 const ContactForm = () => {
 
     let [name, setName] = useState<string>('');
     let [email, setEmail] = useState<string>('');
     let [message, setMessage] = useState<string>('');
+
+    const router = useRouter();
 
     let isNameValid = name.trim().length > 0;
     let isEmailValid = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email);
@@ -37,6 +39,7 @@ const ContactForm = () => {
             setEmail('');
             setMessage('');
             setName('');
+            router.push('/contact/confirmed');
         } else {
             alert('Please fill out all fields');
         }
