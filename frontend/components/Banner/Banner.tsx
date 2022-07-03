@@ -1,14 +1,29 @@
 import SVG from "./SVG";
 import styles from './Banner.module.css';
+import RecentPosts from "./RecentPosts/RecentPosts";
+import React from "react";
 
-const Banner = () => {
+export async function getStaticProps() {
+
+    const res = await fetch('http://localhost:1337/api/posts?populate=heroImage,category');
+    const data = await res.json();
+  
+    return {
+      props: data,
+    }
+  }
+
+const Banner: React.FC<{data: any}> = ({data}) => {
     return(
-        <div className={styles.main}>
-            <SVG />
-            <div className={styles.textBox}>
-                <h1>Your one stop shop for all things coffee in the greater Montreal area!</h1>
+        <React.Fragment>
+            <div className={styles.main}>
+                <div className={styles.textBox}>
+                    <SVG />
+                    <h1>Your one stop shop for all things coffee in the greater Montreal area!</h1>
+                </div>
             </div>
-        </div>
+            <RecentPosts data={data}/>
+        </React.Fragment>
     )
 }
 
