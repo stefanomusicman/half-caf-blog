@@ -2,7 +2,6 @@ import type { NextPage } from 'next'
 import React from 'react'
 import Banner from '../components/Banner/Banner'
 import Footer from '../components/Footer/Footer'
-import GoToPostsButton from '../components/HomeButton/GoToPostsButton'
 import Navigation from '../components/NavBar/Navigation'
 
 export async function getStaticProps() {
@@ -21,7 +20,6 @@ const Home: NextPage<{data: any}> = ({data}) => {
     <React.Fragment>
       <Navigation />
       <Banner data={data}/>
-      {/* <GoToPostsButton /> */}
       <Footer />
     </React.Fragment>
   )

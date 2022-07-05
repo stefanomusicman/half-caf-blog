@@ -21,6 +21,7 @@ const RecentPosts: React.FC<{data: any}> = ({data}) => {
                         title={data[1].attributes.title}
                         dateCreated={data[1].attributes.createdAt}/>
             </div>
+            {/* <GoToPostsButton /> */}
         </div>
     )
 }

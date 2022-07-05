@@ -6,6 +6,34 @@
     width: 100%;
 }
 
+.searchContainer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.searchContainer input {
+    margin-left: 10px;
+    border: none;
+    padding: 18px;
+    background-color: #fff6ef;
+    border-bottom: 1px solid gray;
+    font-size: 1.3rem;
+    font-family: "Work Sans", sans-serif;
+}
+
+.searchContainer input:focus {
+    outline: none;
+}
+
+.searchIcon {
+    width: 40px;
+    height: 40px;
+}
+
 /* Main Body */
 .primaryBodyContainer {
     display: flex;

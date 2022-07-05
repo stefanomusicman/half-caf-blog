@@ -3,16 +3,6 @@ import styles from './Banner.module.css';
 import RecentPosts from "./RecentPosts/RecentPosts";
 import React from "react";
 
-export async function getStaticProps() {
-
-    const res = await fetch('http://localhost:1337/api/posts?populate=heroImage,category');
-    const data = await res.json();
-  
-    return {
-      props: data,
-    }
-  }
-
 const Banner: React.FC<{data: any}> = ({data}) => {
     return(
         <React.Fragment>
