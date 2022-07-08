@@ -60,6 +60,21 @@
       "relation": "manyToOne",
       "target": "api::category.category",
       "inversedBy": "blog_posts"
+    },
+    "cardText": {
+      "type": "text",
+      "required": true
+    },
+    "cardPhoto": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "required": true
     }
   }
 }

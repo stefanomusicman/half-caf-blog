@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState } from "react";
 import BlogCard from "../../components/BlogCard/BlogCard";
 import Footer from "../../components/Footer/Footer";
 import Navigation from "../../components/NavBar/Navigation";
@@ -8,7 +8,7 @@ import { BsSearch } from 'react-icons/bs';
 
 export async function getStaticProps() {
 
-  const res = await fetch('http://localhost:1337/api/posts?populate=heroImage,category&pagination[page]=1&pagination[pageSize]=6');
+  const res = await fetch('http://localhost:1337/api/posts?populate=cardPhoto&pagination[page]=1&pagination[pageSize]=6');
   const data = await res.json();
 
   return {
@@ -20,23 +20,19 @@ export async function getStaticProps() {
 
     const [searchTerm, setSearchTerm] = useState<string>(''); //Responsible for storing the search term
     const [posts, setPosts] = useState(data); //Responsible for storing the data being retrieved from strapi
-    const [pageNumber, setPageNumber] = useState(posts.meta.pagination.page); //Responsible for storing the page number
+    const [pageNumber, setPageNumber] = useState(1); //Responsible for storing the page number
 
-    //Changes the page number based on which one user clicks on
+    //Changes the page number based on which one user clicks on and loads appropriate content
     function pageLoadHandler(page: number): void {
       setPageNumber(page);
-    }
-
-    //Makes a new request for the content to be shown on a new page
-    useEffect((): void => {
       const fetchData = async () => {
         const res = await fetch(`http://localhost:1337/api/posts?populate=heroImage,category&pagination[page]=${pageNumber}&pagination[pageSize]=6`);
         const data = await res.json();
-
+  
         setPosts(data);
       }
       fetchData();
-    }, [pageNumber]);
+    }
 
     //Creates the different page numbers
     function createPages() {
@@ -58,15 +54,15 @@ export async function getStaticProps() {
           </div>
           <div className={styles.primaryBodyContainer}>
             {posts.data.map((item: any) => 
-              <BlogCard introText={item.attributes.IntroText} 
-                        image={item.attributes.heroImage.data.attributes.formats.medium.url} 
+              <BlogCard introText={item.attributes.cardText} 
+                        image={item.attributes.cardPhoto.data.attributes.formats.medium.url} 
                         key={item.id} 
                         id={item.id} 
                         title={item.attributes.title}
                         dateCreated={item.attributes.createdAt}/>)}
           </div>
           <div className={styles.pageNumbersContainer}>
-              {createPages()}
+            {createPages()}
           </div>
           <Footer />
         </div>
