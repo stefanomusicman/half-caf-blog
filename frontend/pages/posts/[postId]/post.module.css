@@ -4,3 +4,57 @@
     justify-content: center;
     align-items: center;
 }
+
+.contentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 2em;
+}
+
+.titleContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding-top: 5em;
+}
+
+.introContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 2em 0px;
+}
+
+.reviewContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding: 2em 0px;
+}
+
+.finalContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    padding: 5em 0px;
+}
+
+@media(max-width: 800px) {
+    .contentContainer {
+        width: 85%;
+    }
+}

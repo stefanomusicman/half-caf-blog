@@ -34,20 +34,34 @@ const Post: React.FC<{data: any}> = ({data}) => {
     const coffeeReview = data.attributes.coffeeReview;
     const locationReview = data.attributes.locationReview;
     const finalVerdict = data.attributes.finalVerdict;
-    const heroImage = data.attributes.heroImage.data.attributes.formats.medium.url;
-    const secondImage = data.attributes.secondImage.data.attributes.formats.medium.url;
+    const heroImage = data.attributes.heroImage.data.attributes.formats.large.url;
+    const secondImage = data.attributes.secondImage.data.attributes.formats.large.url;
 
     return(
         <Fragment>
             <Navigation />
             <div className={styles.main}>
-                <img src={heroImage}/>
-                <h1>{title}</h1>
-                <p>{intro}</p>
-                <p>{coffeeReview}</p>
-                <p>{locationReview}</p>
-                <img src={secondImage}/>
-                <p>{finalVerdict}</p>
+                <div className={styles.contentContainer}>
+                    <img className={styles.image} src={heroImage}/>
+                    <div className={styles.titleContainer}>
+                        <h1>{title}</h1>
+                    </div>
+                    <div className={styles.introContainer}>
+                        <p>{intro}</p>
+                    </div>
+                    <div className={styles.reviewContainer}>
+                        <h2>Coffee Review</h2>
+                        <p>{coffeeReview}</p>
+                    </div>
+                    <div className={styles.reviewContainer}>
+                        <h2>Location Review</h2>
+                        <p>{locationReview}</p>
+                    </div>
+                    <img className={styles.image} src={secondImage}/>
+                    <div className={styles.finalContainer}>
+                        <p>{finalVerdict}</p>
+                    </div>
+                </div>
             </div>
         </Fragment>
     )

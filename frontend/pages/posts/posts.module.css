@@ -50,8 +50,10 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
-    padding-top: 7em;
+    margin-top: 7em;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .pageNumber {
