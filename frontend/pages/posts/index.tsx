@@ -8,7 +8,7 @@ import { BsSearch } from 'react-icons/bs';
 
 export async function getStaticProps() {
 
-  const res = await fetch('http://localhost:1337/api/posts?populate=cardPhoto&pagination[page]=1&pagination[pageSize]=6');
+  const res = await fetch('http://localhost:1337/api/posts?populate=cardPhoto&sort=id:desc&pagination[page]=1&pagination[pageSize]=6');
   const data = await res.json();
 
   return {

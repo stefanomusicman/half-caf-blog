@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Navigation from "../../../components/NavBar/Navigation";
-import styles from './index.module.css';
+import styles from './post.module.css';
 
 export async function getStaticPaths() {
 
@@ -18,7 +18,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({params}: any) {
 
-    const id = Number(params.postId);
+    const id: Number = Number(params.postId);
 
     const res = await fetch(`http://localhost:1337/api/posts/${id}?populate=heroImage,secondImage,category`);
     const data = await res.json();
@@ -29,7 +29,6 @@ export async function getStaticProps({params}: any) {
 }
 
 const Post: React.FC<{data: any}> = ({data}) => {
-    console.log(data);
     const title = data.attributes.title;
     const intro = data.attributes.IntroText;
     const coffeeReview = data.attributes.coffeeReview;
@@ -42,8 +41,8 @@ const Post: React.FC<{data: any}> = ({data}) => {
         <Fragment>
             <Navigation />
             <div className={styles.main}>
-                <h1>{title}</h1>
                 <img src={heroImage}/>
+                <h1>{title}</h1>
                 <p>{intro}</p>
                 <p>{coffeeReview}</p>
                 <p>{locationReview}</p>
