@@ -1,6 +1,8 @@
 import { Fragment } from "react";
+import Footer from "../../../components/Footer/Footer";
 import Navigation from "../../../components/NavBar/Navigation";
 import styles from './post.module.css';
+import { AiOutlineCalendar } from 'react-icons/ai';
 
 export async function getStaticPaths() {
 
@@ -36,16 +38,18 @@ const Post: React.FC<{data: any}> = ({data}) => {
     const finalVerdict = data.attributes.finalVerdict;
     const heroImage = data.attributes.heroImage.data.attributes.formats.large.url;
     const secondImage = data.attributes.secondImage.data.attributes.formats.large.url;
+    const date = new Date(data.attributes.createdAt).toString().split('').slice(0,16).join('');
 
     return(
         <Fragment>
             <Navigation />
             <div className={styles.main}>
                 <div className={styles.contentContainer}>
-                    <img className={styles.image} src={heroImage}/>
                     <div className={styles.titleContainer}>
                         <h1>{title}</h1>
+                        <div className={styles.date}>{<AiOutlineCalendar className={styles.calender}/>}{date}</div>
                     </div>
+                    <img className={styles.image} src={heroImage}/>
                     <div className={styles.introContainer}>
                         <p>{intro}</p>
                     </div>
@@ -63,6 +67,7 @@ const Post: React.FC<{data: any}> = ({data}) => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </Fragment>
     )
 }

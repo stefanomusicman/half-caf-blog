@@ -12,7 +12,7 @@ const BlogCard: React.FC<{ dateCreated:string, introText:string, image:string, i
     }
 
     const date = new Date(dateCreated);
-    const correctDate = date.toString().split('').slice(0,16).join('')
+    const correctDate = date.toString().split('').slice(0,16).join('');
 
     return(
         <Fragment>
