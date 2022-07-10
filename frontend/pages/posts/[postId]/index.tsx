@@ -33,7 +33,8 @@ export async function getStaticProps({params}: any) {
 const Post: React.FC<{data: any}> = ({data}) => {
     const title = data.attributes.title;
     const intro = data.attributes.IntroText;
-    const coffeeReview = data.attributes.coffeeReview;
+    const espressoReview = data.attributes.espressoReview;
+    const milkDrinkReview = data.attributes.milkDrinkReview;
     const locationReview = data.attributes.locationReview;
     const finalVerdict = data.attributes.finalVerdict;
     const heroImage = data.attributes.heroImage.data.attributes.formats.large.url;
@@ -53,11 +54,13 @@ const Post: React.FC<{data: any}> = ({data}) => {
                     <div className={styles.introContainer}>
                         <p>{intro}</p>
                     </div>
-                    <div className={styles.reviewContainer}>
+                    <div className={styles.coffeeContainer}>
                         <h2>Coffee Review</h2>
-                        <p>{coffeeReview}</p>
+                        <p>{<strong>Espresso</strong>} - {espressoReview}</p>
+                        <br />
+                        <p>{<strong>Milk Drink</strong>} - {milkDrinkReview}</p>
                     </div>
-                    <div className={styles.reviewContainer}>
+                    <div className={styles.locationContainer}>
                         <h2>Location Review</h2>
                         <p>{locationReview}</p>
                     </div>

@@ -18,6 +18,10 @@
     font-size: 20px;
 }
 
+.contentContainer h2 {
+    font-size: 30px;
+}
+
 .image {
     width: 100%;
     height: auto;
@@ -57,11 +61,14 @@
     margin-top: 3em;
 }
 
-.reviewContainer h2 {
-    font-size: 30px;
+.coffeeContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
 }
 
-.reviewContainer {
+.locationContainer {
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
