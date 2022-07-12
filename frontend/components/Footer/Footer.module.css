@@ -6,6 +6,10 @@
     width: 100%;
     height: 25em;
     background-color: white;
+    background-image: url('/wave.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     margin-top: 10em;
 }
 
