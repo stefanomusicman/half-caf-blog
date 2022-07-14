@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import styles from './BlogCard.module.css';
 import { AiOutlineCalendar } from 'react-icons/ai';
 
-const BlogCard: React.FC<{ dateCreated:string, introText:string, image:string, id: number, title: string }> = ({ id, introText, title, image, dateCreated }) => {
+const BlogCard: React.FC<{ dateCreated:string, introText:string, image:string, id: number, title: string, category: string }> = ({ id, introText, title, image, dateCreated, category }) => {
 
     const router = useRouter();
 
@@ -22,7 +22,10 @@ const BlogCard: React.FC<{ dateCreated:string, introText:string, image:string, i
                     <img onClick={showPostHandler} src={image}/>
                 </div>
                 <div className={styles.copyContainer}>
-                    <p>{<AiOutlineCalendar />}{correctDate}</p>
+                    <div className={styles.date}>
+                        <p>{<AiOutlineCalendar />}{correctDate}</p>
+                        <p>{category}</p>
+                    </div>
                     <h2>{title}</h2>
                     <p>{introText}</p>
                     <button onClick={showPostHandler}>See Post</button>

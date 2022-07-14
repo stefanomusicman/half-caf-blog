@@ -8,7 +8,7 @@ import { BsSearch } from 'react-icons/bs';
 
 export async function getStaticProps() {
 
-  const res = await fetch('http://localhost:1337/api/posts?populate=cardPhoto&sort=id:desc&pagination[page]=1&pagination[pageSize]=6');
+  const res = await fetch('http://localhost:1337/api/posts?populate=cardPhoto,category&sort=id:desc&pagination[page]=1&pagination[pageSize]=6');
   const data = await res.json();
 
   return {
@@ -22,13 +22,13 @@ export async function getStaticProps() {
     const [searchResults, setSearchResults] = useState<any>([]);
     const [isSearching, setIsSearching] = useState<boolean>(false);
     const [posts, setPosts] = useState(data); //Responsible for storing the data being retrieved from strapi
-    const [pageNumber, setPageNumber] = useState(1); //Responsible for storing the page number
+    const [pageNumber, setPageNumber] = useState<number>(1); //Responsible for storing the page number
 
     //Changes the page number based on which one user clicks on and loads appropriate content
     function pageLoadHandler(page: number): void {
       setPageNumber(page);
       const fetchPageData = async () => {
-        const res = await fetch(`http://localhost:1337/api/posts?populate=heroImage,category&pagination[page]=${pageNumber}&pagination[pageSize]=6`);
+        const res = await fetch(`http://localhost:1337/api/posts?populate=cardPhoto,category&sort=id:desc&pagination[page]=${pageNumber}&pagination[pageSize]=6`);
         const data = await res.json();
   
         setPosts(data);
@@ -44,9 +44,9 @@ export async function getStaticProps() {
     }
 
     // Fetchs Data based on search query
-    function getDataFromSearch(term: string) {
+    function getDataFromSearch(term: string): void {
       const fetchSearchData = async () => {
-        const res = await fetch(`http://localhost:1337/api/posts?populate=cardPhoto&filters[title][$containsi]=${term}`);
+        const res = await fetch(`http://localhost:1337/api/posts?populate=cardPhoto,category&filters[title][$containsi]=${term}`);
         const data = await res.json();
 
         setIsSearching(true);
@@ -56,13 +56,13 @@ export async function getStaticProps() {
     }
 
     // Responsible for listening to every search term and carrying out a request to fetch appropriate data
-    useEffect(() => {
+    useEffect((): void => {
       if(searchTerm.length === 0) {
         setIsSearching(false);
       } else {
         getDataFromSearch(searchTerm);
       }
-    }, [searchTerm])
+    }, [searchTerm]);
 
     return(
       <Fragment>
@@ -82,14 +82,16 @@ export async function getStaticProps() {
                         key={item.id} 
                         id={item.id} 
                         title={item.attributes.title}
-                        dateCreated={item.attributes.createdAt}/>)}
+                        dateCreated={item.attributes.createdAt}
+                        category={item.attributes.category.data.attributes.name}/>)}
             {isSearching && searchResults.map((item: any) => 
               <BlogCard introText={item.attributes.cardText} 
                         image={item.attributes.cardPhoto.data.attributes.formats.medium.url} 
                         key={item.id} 
                         id={item.id} 
                         title={item.attributes.title}
-                        dateCreated={item.attributes.createdAt}/>)}
+                        dateCreated={item.attributes.createdAt}
+                        category={item.attributes.category.data.attributes.name}/>)}
           </div>
           <div className={styles.pageNumbersContainer}>
             {createPages()}

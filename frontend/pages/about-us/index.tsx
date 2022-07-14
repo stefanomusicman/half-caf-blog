@@ -24,7 +24,7 @@ const About = () => {
                 </div>
                 <div className={styles.descriptionContainer}>
                     <div className={styles.paragraphOne}>
-                        <p>Welcome to Half Caf Blog, a place for all things coffee within the greater Montreal Area. Here you will find a variety of content including coffee shop reviews, coffee reviews and coffee machine reviews! We are a small team of people who are passionate about coffee and would like nothing more than to provide Montrealers with non-biased information for anything related to coffee.</p>
+                        <p>Welcome to Half Caf Blog, a place for all things coffee within the greater Montreal Area. Here you will find a variety of content including coffee shop reviews and coffee reviews! We are a small team of people who are passionate about coffee and would like nothing more than to provide Montrealers with non-biased information for anything related to coffee.</p>
                     </div>
                     <div className={styles.paragraphTwo}>
                         <p>At Half Caf Blog, when we review anything, we don't simply focus on the overall trendiness of a product/coffee shop but we also put a lot of emphasis on the actual coffee! For instance, when we review a coffee shop, we always order two drinks, a black espresso in order to get a taste for the raw coffee being served and then a milk drink to get a taste of whether or not the milk is being heated skillfully.</p>

@@ -13,13 +13,15 @@ const RecentPosts: React.FC<{data: any}> = ({data}) => {
                         key={data[0].id}
                         id={data[0].id} 
                         title={data[0].attributes.title}
-                        dateCreated={data[0].attributes.createdAt}/>
+                        dateCreated={data[0].attributes.createdAt}
+                        category={data[0].attributes.category.data.attributes.name}/>
                 <BlogCard introText={data[1].attributes.cardText}
                         image={data[1].attributes.cardPhoto.data.attributes.formats.medium.url}
                         key={data[1].id}
                         id={data[1].id} 
                         title={data[1].attributes.title}
-                        dateCreated={data[1].attributes.createdAt}/>
+                        dateCreated={data[1].attributes.createdAt}
+                        category={data[1].attributes.category.data.attributes.name}/>
             </div>
             {/* <GoToPostsButton /> */}
         </div>
