@@ -4,6 +4,7 @@
     justify-content: center;
     align-items: center;
     width: 45%;
+    margin-bottom: 5em;
 }
 
 .imageContainer {
@@ -102,6 +103,7 @@
 @media(max-width: 700px) {
     .main {
         width: 100%;
+        margin-bottom: 0em;
     }
 
     .copyContainer button {
