@@ -37,13 +37,14 @@ export async function getStaticProps() {
     }
 
     //Creates the different page numbers
-    function createPages() {
+    let pages: any = [];
+    (function createPages(): void {
       for(let i = 1; i <= posts.meta.pagination.pageCount; i++) {
-        return <div onClick={() => pageLoadHandler(i)} className={styles.pageNumber}>{i}</div>
+        pages.push(i);
       }
-    }
+    })();
 
-    // Fetchs Data based on search query
+    //Function for fetching Data based on search query
     function getDataFromSearch(term: string): void {
       const fetchSearchData = async () => {
         const res = await fetch(`http://localhost:1337/api/posts?populate=cardPhoto,category&filters[title][$containsi]=${term}`);
@@ -63,6 +64,11 @@ export async function getStaticProps() {
         getDataFromSearch(searchTerm);
       }
     }, [searchTerm]);
+
+    // Responsible for listening to every time a user wants to navigate to a different page
+    useEffect((): void => {
+      pageLoadHandler(pageNumber);
+    }, [pageNumber])
 
     return(
       <Fragment>
@@ -94,7 +100,7 @@ export async function getStaticProps() {
                         category={item.attributes.category.data.attributes.name}/>)}
           </div>
           <div className={styles.pageNumbersContainer}>
-            {createPages()}
+              {pages.map((num: number) =>  <div style={{'opacity': num === pageNumber ? '1' : '0.6'}} key={num} onClick={(): void => setPageNumber(num)} className={styles.pageNumber}>{num}</div>)}
           </div>
           <Footer />
         </div>
