@@ -17,7 +17,7 @@ const Contact = () => {
                     <div className={styles.leftSide}>
                         <div className={styles.paragraph1}>
                             <h2>Contact Half Caf Blog</h2>
-                            <p>We're here to help answer any questions you may have. Feel free to reach out for anything from questions, business inquiries or just to chat!</p>
+                            <p>We&apos;re here to help answer any questions you may have. Feel free to reach out for anything from questions, business inquiries or just to chat!</p>
                         </div>
                         <div className={styles.paragraph2}>
                             <h2>Hate forms?</h2>

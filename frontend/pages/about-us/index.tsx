@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
 import Navigation from "../../components/NavBar/Navigation";
-import styles from './about-us.module.css';
+import styles from "./about-us.module.css";
 import Image from "next/image";
-import coffee1 from '../../public/coffee1.jpeg';
-import coffee2 from '../../public/coffee2.jpg';
-import coffee3 from '../../public/coffee3.jpg';
+import coffee1 from "../../public/coffee1.jpeg";
+import coffee2 from "../../public/coffee2.jpg";
+import coffee3 from "../../public/coffee3.jpg";
 import Footer from "../../components/Footer/Footer";
 import Title from "../../components/Title/Title";
 
@@ -13,7 +13,7 @@ const About = () => {
         <Fragment>
             <Navigation />
             <div className={styles.contentContainer}>
-                <Title title='About Us'/>
+                <Title title="About Us"/>
                 <div className={styles.captionBox}>
                     <h2>We are Half Caf Blog, a team of passionate coffee conoisseurs.</h2>
                 </div>
@@ -27,7 +27,7 @@ const About = () => {
                         <p>Welcome to Half Caf Blog, a place for all things coffee within the greater Montreal Area. Here you will find a variety of content including coffee shop reviews and coffee reviews! We are a small team of people who are passionate about coffee and would like nothing more than to provide Montrealers with non-biased information for anything related to coffee.</p>
                     </div>
                     <div className={styles.paragraphTwo}>
-                        <p>At Half Caf Blog, when we review anything, we don't simply focus on the overall trendiness of a product/coffee shop but we also put a lot of emphasis on the actual coffee! For instance, when we review a coffee shop, we always order two drinks, a black espresso in order to get a taste for the raw coffee being served and then a milk drink to get a taste of whether or not the milk is being heated skillfully.</p>
+                        <p>At Half Caf Blog, when we review anything, we don&apos;t simply focus on the overall trendiness of a product/coffee shop but we also put a lot of emphasis on the actual coffee! For instance, when we review a coffee shop, we always order two drinks, a black espresso in order to get a taste for the raw coffee being served and then a milk drink to get a taste of whether or not the milk is being heated skillfully.</p>
                     </div>
                 </div>
             </div>
