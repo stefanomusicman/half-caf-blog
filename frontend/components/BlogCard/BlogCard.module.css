@@ -100,6 +100,24 @@
     font-size: 1.3rem;
 }
 
+.categoryBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.svg {
+    position: absolute;
+    z-index: 1;
+    fill: #F08E80;
+    opacity: 0.7;
+}
+
+.categoryBox p {
+    z-index: 100;
+}
+
 @media(max-width: 700px) {
     .main {
         width: 100%;
