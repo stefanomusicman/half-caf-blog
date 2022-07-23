@@ -17,6 +17,10 @@ a {
   text-decoration: none;
 }
 
+strong {
+  color: #F08E80;
+}
+
 * {
   box-sizing: border-box;
   user-select: none;

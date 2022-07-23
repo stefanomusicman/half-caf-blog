@@ -9,7 +9,7 @@ const Banner: React.FC<{data: any}> = ({data}) => {
             <div className={styles.main}>
                 <div className={styles.textBox}>
                     <SVG />
-                    <h1>Your one stop shop for all things coffee in the greater Montreal area!</h1>
+                    <h1>Your one stop shop for all things <strong>coffee</strong> in the greater Montreal area!</h1>
                 </div>
             </div>
             <RecentPosts data={data}/>

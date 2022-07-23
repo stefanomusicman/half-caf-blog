@@ -15,7 +15,7 @@ const About = () => {
             <div className={styles.contentContainer}>
                 <Title title="About Us"/>
                 <div className={styles.captionBox}>
-                    <h2>We are Half Caf Blog, a team of passionate coffee conoisseurs.</h2>
+                    <h2>We are <strong>Half Caf Blog</strong>, a team of passionate <strong>coffee conoisseurs.</strong></h2>
                 </div>
                 <div className={styles.imageContainer}>
                     <Image className={styles.image} src={coffee2} alt="picture of coffee cup" width={650} height={350}/>
@@ -24,10 +24,10 @@ const About = () => {
                 </div>
                 <div className={styles.descriptionContainer}>
                     <div className={styles.paragraphOne}>
-                        <p>Welcome to Half Caf Blog, a place for all things coffee within the greater Montreal Area. Here you will find a variety of content including coffee shop reviews and coffee reviews! We are a small team of people who are passionate about coffee and would like nothing more than to provide Montrealers with non-biased information for anything related to coffee.</p>
+                        <p>Welcome to Half Caf Blog, a place for all things <strong>coffee</strong> within the greater <strong>Montreal</strong> Area. Here you will find a variety of content including <strong>coffee shop reviews</strong> and <strong>coffee reviews</strong>! We are a small team of people who are passionate about coffee and would like nothing more than to provide Montrealers with non-biased information for anything related to coffee.</p>
                     </div>
                     <div className={styles.paragraphTwo}>
-                        <p>At Half Caf Blog, when we review anything, we don&apos;t simply focus on the overall trendiness of a product/coffee shop but we also put a lot of emphasis on the actual coffee! For instance, when we review a coffee shop, we always order two drinks, a black espresso in order to get a taste for the raw coffee being served and then a milk drink to get a taste of whether or not the milk is being heated skillfully.</p>
+                        <p>At Half Caf Blog, when we review anything, we don&apos;t simply focus on the overall trendiness of a product/coffee shop but we also put a lot of <strong>emphasis on the actual coffee!</strong> For instance, when we review a coffee shop, <strong>we always order two drinks</strong>, a black espresso in order to get a taste for the raw coffee being served and then a milk drink to get a taste of whether or not the milk is being heated skillfully.</p>
                     </div>
                 </div>
             </div>
