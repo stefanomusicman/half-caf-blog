@@ -1,7 +1,6 @@
 import styles from './RecentPosts.module.css';
 import Title from '../../Title/Title';
 import BlogCard from '../../BlogCard/BlogCard';
-import GoToPostsButton from '../../HomeButton/GoToPostsButton';
 
 const RecentPosts: React.FC<{data: any}> = ({data}) => {
     return(
@@ -23,7 +22,6 @@ const RecentPosts: React.FC<{data: any}> = ({data}) => {
                         dateCreated={data[1].attributes.createdAt}
                         category={data[1].attributes.category.data.attributes.name}/>
             </div>
-            {/* <GoToPostsButton /> */}
         </div>
     )
 }

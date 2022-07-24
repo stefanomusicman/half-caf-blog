@@ -27,7 +27,7 @@ const About = () => {
                         <p>Welcome to Half Caf Blog, a place for all things <strong>coffee</strong> within the greater <strong>Montreal</strong> Area. Here you will find a variety of content including <strong>coffee shop reviews</strong> and <strong>coffee reviews</strong>! We are a small team of people who are passionate about coffee and would like nothing more than to provide Montrealers with non-biased information for anything related to coffee.</p>
                     </div>
                     <div className={styles.paragraphTwo}>
-                        <p>At Half Caf Blog, when we review anything, we don&apos;t simply focus on the overall trendiness of a product/coffee shop but we also put a lot of <strong>emphasis on the actual coffee!</strong> For instance, when we review a coffee shop, <strong>we always order two drinks</strong>, a black espresso in order to get a taste for the raw coffee being served and then a milk drink to get a taste of whether or not the milk is being heated skillfully.</p>
+                        <p>At Half Caf Blog, when we review anything, we don&apos;t simply focus on the overall trendiness of a product/coffee shop but we also put a lot of <strong>emphasis on the actual coffee!</strong> For instance, when we review a coffee shop, <strong>we always order two drinks</strong>, a black <strong>espresso</strong> in order to get a taste for the raw coffee being served and then a <strong>milk drink</strong> to get a taste of whether or not the milk is being heated skillfully.</p>
                     </div>
                 </div>
             </div>

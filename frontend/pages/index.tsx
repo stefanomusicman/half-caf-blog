@@ -6,7 +6,7 @@ import Navigation from '../components/NavBar/Navigation'
 
 export async function getStaticProps() {
 
-  const res = await fetch('http://localhost:1337/api/posts?&sort=id:desc&populate=cardPhoto,category');
+  const res = await fetch('http://localhost:1337/api/posts?fields=title,cardText,createdAt&sort=id:desc&populate[category][fields][0]=name&populate=cardPhoto');
   const data = await res.json();
 
   return {
