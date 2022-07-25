@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 import { useRouter } from "next/router";
 import styles from './BlogCard.module.css';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from "next/image";
 
 const BlogCard: React.FC<{ dateCreated:string, introText:string, image:string, id: number, title: string, category: string }> = ({ id, introText, title, image, dateCreated, category }) => {
 
@@ -19,7 +20,7 @@ const BlogCard: React.FC<{ dateCreated:string, introText:string, image:string, i
             <div className={styles.main}>
                 <div className={styles.imageContainer}>
                     <div className={styles.whiteBackground}></div>
-                    <img onClick={showPostHandler} src={image}/>
+                    <img alt="coffee" onClick={showPostHandler} src={image}/>
                 </div>
                 <div className={styles.copyContainer}>
                     <div className={styles.date}>

@@ -3,6 +3,7 @@ import Footer from "../../../components/Footer/Footer";
 import Navigation from "../../../components/NavBar/Navigation";
 import styles from './post.module.css';
 import { AiOutlineCalendar } from 'react-icons/ai';
+import Image from "next/image";
 
 export async function getStaticPaths() {
 
@@ -31,6 +32,11 @@ export async function getStaticProps({params}: any) {
 }
 
 const Post: React.FC<{data: any}> = ({data}) => {
+
+    if(!data) {
+        return null
+    }
+
     const title = data.attributes.title;
     const intro = data.attributes.IntroText;
     const espressoReview = data.attributes.espressoReview;
@@ -50,7 +56,7 @@ const Post: React.FC<{data: any}> = ({data}) => {
                         <h1>{title}</h1>
                         <div className={styles.date}>{<AiOutlineCalendar className={styles.calender}/>}{date}</div>
                     </div>
-                    <img className={styles.image} src={heroImage}/>
+                    <img alt="coffee" className={styles.image} src={heroImage}/>
                     <div className={styles.introContainer}>
                         <p>{intro}</p>
                     </div>
@@ -64,7 +70,7 @@ const Post: React.FC<{data: any}> = ({data}) => {
                         <h2>Location Review</h2>
                         <p>{locationReview}</p>
                     </div>
-                    <img className={styles.image} src={secondImage}/>
+                    <img alt="coffee" className={styles.image} src={secondImage}/>
                     <div className={styles.finalContainer}>
                         <p>{finalVerdict}</p>
                     </div>
