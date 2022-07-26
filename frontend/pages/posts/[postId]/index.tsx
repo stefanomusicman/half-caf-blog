@@ -7,7 +7,7 @@ import Image from "next/image";
 
 export async function getStaticPaths() {
 
-    const res = await fetch('http://localhost:1337/api/posts');
+    const res = await fetch('https://half-caf-blog.herokuapp.com/api/posts');
     const { data } = await res.json();
     const paths = data.map((post: any) => {
         return { params: { postId: post.id.toString() } }
@@ -23,7 +23,7 @@ export async function getStaticProps({params}: any) {
 
     const id: Number = Number(params.postId);
 
-    const res = await fetch(`http://localhost:1337/api/posts/${id}?populate=heroImage,secondImage,category`);
+    const res = await fetch(`https://half-caf-blog.herokuapp.com/api/posts/${id}?populate=heroImage,secondImage,category`);
     const data = await res.json();
 
     return {

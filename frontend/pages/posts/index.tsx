@@ -8,7 +8,7 @@ import { BsSearch } from 'react-icons/bs';
 
 export async function getStaticProps() {
 
-  const res = await fetch('http://localhost:1337/api/posts?fields=title,cardText,createdAt&sort=id:desc&populate[category][fields][0]=name&populate=cardPhoto&pagination[page]=1&pagination[pageSize]=6');
+  const res = await fetch('https://half-caf-blog.herokuapp.com/api/posts?fields=title,cardText,createdAt&sort=id:desc&populate[category][fields][0]=name&populate=cardPhoto&pagination[page]=1&pagination[pageSize]=6');
   const data = await res.json();
 
   return {
@@ -28,7 +28,7 @@ export async function getStaticProps() {
     function pageLoadHandler(page: number): void {
       setPageNumber(page);
       const fetchPageData = async () => {
-        const res = await fetch(`http://localhost:1337/api/posts?fields=title,cardText,createdAt&sort=id:desc&populate[category][fields][0]=name&populate=cardPhoto&pagination[page]=${pageNumber}&pagination[pageSize]=6`);
+        const res = await fetch(`https://half-caf-blog.herokuapp.com/api/posts?fields=title,cardText,createdAt&sort=id:desc&populate[category][fields][0]=name&populate=cardPhoto&pagination[page]=${pageNumber}&pagination[pageSize]=6`);
         const data = await res.json();
   
         setPosts(data);
@@ -47,7 +47,7 @@ export async function getStaticProps() {
     //Function for fetching Data based on search query
     function getDataFromSearch(term: string): void {
       const fetchSearchData = async () => {
-        const res = await fetch(`http://localhost:1337/api/posts?populate=cardPhoto,category&filters[title][$containsi]=${term}`);
+        const res = await fetch(`https://half-caf-blog.herokuapp.com/api/posts?populate=cardPhoto,category&filters[title][$containsi]=${term}`);
         const data = await res.json();
 
         setIsSearching(true);
